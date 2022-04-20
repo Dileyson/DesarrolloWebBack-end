@@ -1,26 +1,27 @@
-// Importamos el framework de express
+// Importacion del framework de express
 const express = require('express')
 
+// Agregar configuracion al process.env
+require("../config/index.config")
 
-
-//Creamos/instanciamos la aplicacion de express
+// Instanciar la aplicacion de express
 const app = express()
 
-//Integrando el router con la app
-const router= require("./routers/index.router")
+// Aplicar middleware que permite leer los json del body
+app.use(express.json())
+
+// Integrando el router con la app
+const router = require("./routers/index.router")
 app.use(router)
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
 
-// Puerto donde se levanta el servidor web
+// Puerto donde se levanta el servidor web 
 // Puerto donde esta escuchando la API
-const PORT = 3000
+const PORT = process.env.PORT
 
-//Levantar la API que estará escuchando en el puerto 3000
-//Primer parametro: Puerto
-//Segundo parametro: Callback
+// Levantar la API que estará escuchando en el PUERTO 3000
+// 1. Primer parametro: Puerto
+// 2. Segundo parametro: Callback - Funcion
 app.listen(PORT, () => {
   console.log(`API escuchando en: http://localhost:${PORT}`)
 })

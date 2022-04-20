@@ -4,21 +4,22 @@
   "description": "Proyecto restaurante API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dileyson/DesarrolloWebBack-end.git"
+    "url": "git+https://github.com/saurmo/desarrollo-web-frontend.git"
   },
-  "author": "dileyson",
+  "author": "saurmo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dileyson/DesarrolloWebBack-end/issues"
+    "url": "https://github.com/saurmo/desarrollo-web-frontend/issues"
   },
-  "homepage": "https://github.com/Dileyson/DesarrolloWebBack-end#readme",
+  "homepage": "https://github.com/saurmo/desarrollo-web-frontend#readme",
   "dependencies": {
-    "express": "4.17.3"
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
